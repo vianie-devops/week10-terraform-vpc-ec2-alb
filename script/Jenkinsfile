@@ -19,7 +19,10 @@ pipeline{
         }
         stage('plan'){
             steps{
-                sh 'terraform plan -lock=false -var-file="terraform.tfvars" -no-color'
+                sh 'terraform plan -lock=false
+                  -var "ENVIRONMENT=main" \
+                 -var "INSTANCE_TYPE=t2.micro" \
+                 -var "REGION=us-east-1" \ -no-color'
             }
         }
     }
