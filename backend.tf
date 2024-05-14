@@ -4,6 +4,6 @@ terraform {
     key            = "week10/terraform.tfstate"
     region         = "us-east-1"
     encrypt        = true
-    dynamodb_table = "stage-log-1"
+    dynamodb_table = "stage-log"
   }
 }
